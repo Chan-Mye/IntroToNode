@@ -1,4 +1,5 @@
 var http = require('http');
+var https = require('https')
 
 var options = {
     host: 'www.google.com',
@@ -11,7 +12,7 @@ console.log("Going to make request...");
 
 // Version 1:  http.request with string URL
 
-var req = http.request('https://www.google.com/', function(response) {
+var req = https.request('https://www.google.com/', function(response) {
     console.log(response.statusCode);
     response.pipe(process.stdout);
 });
